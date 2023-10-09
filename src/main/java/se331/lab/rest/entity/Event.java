@@ -29,5 +29,7 @@ public class Event {
     Organizer organizer;
     @ManyToMany(mappedBy = "eventHistory")
     List<Participant> participants;
+    @ElementCollection(fetch = FetchType.EAGER)
+    List<String> images;
     Boolean petsAllowed;
 }

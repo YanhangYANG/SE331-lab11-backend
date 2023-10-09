@@ -13,6 +13,8 @@ import se331.lab.rest.repository.EventRepository;
 import se331.lab.rest.repository.OrgRepository;
 import se331.lab.rest.repository.OrganizerRepository;
 
+import java.util.Collections;
+
 @Component
 @RequiredArgsConstructor
 public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
@@ -41,6 +43,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                                 .date("3rd Sept")
                                 .time("3.00-4.00 pm.")
                                 .petsAllowed(false)
+
                                 .build());
                tempEvent.setOrganizer(org1);
                org1.getOwnEvents().add(tempEvent);
